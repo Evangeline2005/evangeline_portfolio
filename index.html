@@ -2,93 +2,187 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Evangeline Aruna M - Portfolio</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #f4f4f9;
-      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f9fafb;
+      color: #223344;
     }
     header {
+      background: #2980b9;
+      color: white;
+      padding: 40px 20px;
       text-align: center;
-      margin-bottom: 40px;
-      color: #2c3e50;
     }
-    h1 {
-      margin-bottom: 5px;
-      color: #2980b9;
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+      letter-spacing: 3px;
+    }
+    header h2 {
+      margin-top: 10px;
+      font-weight: 300;
+      font-size: 1.5em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    section {
+      margin-bottom: 60px;
     }
     h2 {
-      color: #34495e;
-      margin-top: 40px;
-      border-bottom: 2px solid #2980b9;
-      padding-bottom: 5px;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
+      border-bottom: 3px solid #2980b9;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      font-size: 2em;
     }
-    p {
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-      color: #555;
-      font-size: 1.1em;
-      line-height: 1.5;
+    .about p {
+      font-size: 1.2em;
+      max-width: 720px;
+      line-height: 1.6;
     }
-    .project {
-      margin-top: 20px;
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .skill {
+      background: #eaf4fd;
+      color: #2980b9;
+      padding: 10px 15px;
+      border-radius: 15px;
+      font-weight: 600;
+      font-size: 1rem;
+      box-shadow: 0 2px 5px #b1d1f8;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 25px;
+    }
+    .project-card {
       background: white;
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
+      box-shadow: 0 0 15px rgb(41 128 185 / 0.2);
+      display: flex;
+      flex-direction: column;
     }
-    .contact-links {
-      margin-top: 20px;
+    .project-card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .project-card h3 {
+      margin: 0 0 10px;
+      color: #2980b9;
+    }
+    .tech-badges {
+      margin-top: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .badge {
+      background: #d0e8ff;
+      color: #044a91;
+      border-radius: 10px;
+      padding: 3px 10px;
+      font-size: 0.9em;
+      font-weight: 600;
+    }
+    footer {
+      background: #2980b9;
+      color: white;
+      text-align: center;
+      padding: 15px;
     }
     .contact-links a {
-      color: #2980b9;
+      color: white;
       text-decoration: none;
-      font-weight: bold;
-      margin: 0 15px;
-      font-size: 1.1em;
+      margin: 0 10px;
+      font-weight: 600;
+      font-size: 1.2em;
     }
     .contact-links a:hover {
       text-decoration: underline;
     }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2em;
+      }
+      section {
+        margin-bottom: 40px;
+      }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Evangeline Aruna M</h1>
-    <h2>B.Tech CSE (AI) Student</h2>
-    <p>Passionate about Artificial Intelligence and developing innovative machine learning solutions to real-world problems.</p>
-    <div class="contact-links">
-      <a href="https://www.linkedin.com/in/evangelinearuna2/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      
-    </div>
-  </header>
 
-  <section>
-    <h2>Projects</h2>
+<header>
+  <h1>Evangeline Aruna M</h1>
+  <h2>B.Tech CSE (AI) Student</h2>
+  <div class="contact-links" style="margin-top:15px;">
+    <a href="https://www.linkedin.com/in/evangelinearuna2/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </div>
+</header>
 
-    <div class="project">
-      <h3>Handwriting Recognition Using MNIST Custom Dataset</h3>
-      <p>
-        Built an AI model to recognize handwritten digits using a custom dataset inspired by MNIST. Utilized image processing and neural networks techniques to achieve accurate digit classification.
-      </p>
-    </div>
+<div class="container">
+  <section class="about">
+    <h2>About Me</h2>
+    <p>Passionate about Artificial Intelligence and developing innovative machine learning solutions to real-world problems. Currently pursuing B.Tech in Computer Science with specialization in AI, aiming to leverage technology for impactful solutions.</p>
+  </section>
 
-    <div class="project">
-      <h3>Cardiovascular Disease Prediction</h3>
-      <p>
-        Developed a machine learning model to predict cardiovascular disease risk based on patient health features. Applied data analysis, feature engineering, and predictive modeling for early diagnosis assistance.
-      </p>
+  <section class="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">Python</div>
+      <div class="skill">Machine Learning</div>
+      <div class="skill">Deep Learning</div>
+      <div class="skill">NLP</div>
+      <div class="skill">Computer Vision</div>
+      <div class="skill">Django</div>
+      <div class="skill">Data Analysis</div>
     </div>
   </section>
+
+  <section class="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <img src="your-mnist-project-screenshot.png" alt="Handwriting Recognition Project Image" />
+        <h3>Handwriting Recognition Using MNIST Custom Dataset</h3>
+        <p>Built an AI model to recognize handwritten digits using a custom dataset inspired by MNIST. Utilized image processing and neural networks techniques to achieve accurate digit classification.</p>
+        <div class="tech-badges">
+          <span class="badge">Python</span>
+          <span class="badge">TensorFlow</span>
+          <span class="badge">CNN</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="your-cardiovascular-project-screenshot.png" alt="Cardiovascular Disease Prediction Project Image" />
+        <h3>Cardiovascular Disease Prediction</h3>
+        <p>Developed a machine learning model to predict cardiovascular disease risk based on patient health features. Applied data analysis, feature engineering, and predictive modeling for early diagnosis assistance.</p>
+        <div class="tech-badges">
+          <span class="badge">Python</span>
+          <span class="badge">Scikit-learn</span>
+          <span class="badge">Data Science</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  &copy; 2025 Evangeline Aruna M. All rights reserved.
+</footer>
+
 </body>
 </html>
