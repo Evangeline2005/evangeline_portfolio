@@ -5,143 +5,193 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Evangeline Aruna M - Portfolio</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background-color: #f9fafb;
-      color: #223344;
+      font-family: "Poppins", sans-serif;
+      background-color: #f7f9fc;
+      color: #222;
     }
-    header {
-      background: #2980b9;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 3em;
-      letter-spacing: 3px;
-    }
-    header h2 {
-      margin-top: 10px;
-      font-weight: 300;
-      font-size: 1.5em;
-    }
-    .container {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-    section {
-      margin-bottom: 60px;
-    }
-    h2 {
-      border-bottom: 3px solid #2980b9;
-      padding-bottom: 8px;
-      margin-bottom: 20px;
-      font-size: 2em;
-    }
-    .about p {
-      font-size: 1.2em;
-      max-width: 720px;
-      line-height: 1.6;
-    }
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-    .skill {
-      background: #eaf4fd;
-      color: #2980b9;
-      padding: 10px 15px;
-      border-radius: 15px;
-      font-weight: 600;
-      font-size: 1rem;
-      box-shadow: 0 2px 5px #b1d1f8;
-    }
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-      gap: 25px;
-    }
-    .project-card {
+
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
       background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 15px rgb(41 128 185 / 0.2);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #2575fc;
+      font-weight: 600;
+      font-size: 1.1em;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #6a11cb;
+    }
+
+    section {
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 100px 20px 60px;
+      text-align: center;
+      animation: fadeIn 1s ease forwards;
     }
-    .project-card img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-bottom: 15px;
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-    .project-card h3 {
-      margin: 0 0 10px;
-      color: #2980b9;
+
+    /* Home Section */
+    #home {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
     }
-    .tech-badges {
-      margin-top: auto;
+
+    #home h1 {
+      font-size: 3em;
+      letter-spacing: 2px;
+    }
+
+    #home h2 {
+      font-size: 1.6em;
+      font-weight: 400;
+      margin-top: 10px;
+      opacity: 0.9;
+    }
+
+    /* About Section */
+    #about {
+      background: #ffffff;
+    }
+
+    #about h2, #skills h2, #contact h2 {
+      color: #2575fc;
+      border-bottom: 3px solid #6a11cb;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+
+    #about p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      max-width: 750px;
+      color: #444;
+    }
+
+    /* Skills Section */
+    #skills {
+      background: #f0f4ff;
+    }
+
+    .skills-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
     }
-    .badge {
-      background: #d0e8ff;
-      color: #044a91;
-      border-radius: 10px;
-      padding: 3px 10px;
-      font-size: 0.9em;
+
+    .skill {
+      background: white;
+      color: #2575fc;
+      padding: 12px 20px;
+      border-radius: 25px;
       font-weight: 600;
+      box-shadow: 0 3px 10px rgba(37,117,252,0.2);
+      transition: transform 0.3s ease;
     }
+
+    .skill:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Contact Section */
+    #contact {
+      background: linear-gradient(135deg, #2575fc, #6a11cb);
+      color: white;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .contact-links a {
+      color: white;
+      font-weight: 600;
+      font-size: 1.2em;
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .contact-links a:hover {
+      opacity: 0.8;
+    }
+
     footer {
-      background: #2980b9;
+      background: #222;
       color: white;
       text-align: center;
       padding: 15px;
+      font-size: 0.95em;
     }
-    .contact-links a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: 600;
-      font-size: 1.2em;
-    }
-    .contact-links a:hover {
-      text-decoration: underline;
-    }
+
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.2em;
-      }
-      section {
-        margin-bottom: 40px;
-      }
+      #home h1 { font-size: 2.2em; }
+      #home h2 { font-size: 1.2em; }
     }
   </style>
 </head>
+
 <body>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-<header>
-  <h1>Evangeline Aruna M</h1>
-  <h2>B.Tech CSE (AI) Student</h2>
-  <div class="contact-links" style="margin-top:15px;">
-    <a href="https://www.linkedin.com/in/evangelinearuna2/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer">GitHub</a>
-  </div>
-</header>
-
-<div class="container">
-  <section class="about">
-    <h2>About Me</h2>
-    <p>Passionate about Artificial Intelligence and developing innovative machine learning solutions to real-world problems. Currently pursuing B.Tech in Computer Science with specialization in AI, aiming to leverage technology for impactful solutions.</p>
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Evangeline Aruna M</h1>
+    <h2>B.Tech CSE (Artificial Intelligence) Student</h2>
   </section>
 
-  <section class="skills">
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am passionate about Artificial Intelligence and developing innovative solutions that make a difference.  
+      Currently pursuing B.Tech in Computer Science (AI), I love exploring machine learning, NLP, and data-driven systems  
+      to create impactful, intelligent applications.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
     <h2>Skills</h2>
-    <div class="skills">
+    <div class="skills-container">
       <div class="skill">Python</div>
       <div class="skill">Machine Learning</div>
       <div class="skill">Deep Learning</div>
@@ -152,37 +202,19 @@
     </div>
   </section>
 
-  <section class="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project-card">
-        <img src="your-mnist-project-screenshot.png" alt="Handwriting Recognition Project Image" />
-        <h3>Handwriting Recognition Using MNIST Custom Dataset</h3>
-        <p>Built an AI model to recognize handwritten digits using a custom dataset inspired by MNIST. Utilized image processing and neural networks techniques to achieve accurate digit classification.</p>
-        <div class="tech-badges">
-          <span class="badge">Python</span>
-          <span class="badge">TensorFlow</span>
-          <span class="badge">CNN</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <img src="your-cardiovascular-project-screenshot.png" alt="Cardiovascular Disease Prediction Project Image" />
-        <h3>Cardiovascular Disease Prediction</h3>
-        <p>Developed a machine learning model to predict cardiovascular disease risk based on patient health features. Applied data analysis, feature engineering, and predictive modeling for early diagnosis assistance.</p>
-        <div class="tech-badges">
-          <span class="badge">Python</span>
-          <span class="badge">Scikit-learn</span>
-          <span class="badge">Data Science</span>
-        </div>
-      </div>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>You can reach out to me or connect via the links below:</p>
+    <div class="contact-links">
+      <a href="mailto:evangelinearuna@example.com">📧 Email Me</a>
+      <a href="https://www.linkedin.com/in/evangelinearuna2/" target="_blank">💼 LinkedIn</a>
+      <a href="https://github.com/evangelinearuna2" target="_blank">💻 GitHub</a>
     </div>
   </section>
-</div>
 
-<footer>
-  &copy; 2025 Evangeline Aruna M. All rights reserved.
-</footer>
-
+  <footer>
+    © 2025 Evangeline Aruna M. All rights reserved.
+  </footer>
 </body>
 </html>
